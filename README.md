@@ -40,7 +40,7 @@ PyThai equires `thailib` to work. You can install it quite easily:
 
 And then you can simply install `pythai` through **pip**:
 
-    pip install pythai
+    pip install pythai==0.1.3
 
 More
 ------------

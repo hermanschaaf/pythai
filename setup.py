@@ -45,7 +45,7 @@ class TestCommand(Command):
 
 setup(
     name="pythai",
-    version="0.1.0",
+    version="0.1.3",
     packages=['pythai'],
 
     ext_modules=[ 
@@ -59,10 +59,8 @@ setup(
     #     'nose==1.3.0',
     #     'wsgiref==0.1.2'
     # ],
-
-    package_data={
-        # If any package contains *.txt, *.rst or *.md files, include them:
-        '': ['*.txt', '*.rst', '*.md', ],
+    package_data = {
+        'pythai': ['LICENSE.txt', 'README.md']
     },
 
     # metadata for upload to PyPI
