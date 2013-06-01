@@ -21,6 +21,16 @@ pythai.contains_thai(u"helloการที่ไ")
 
 It's meant to be fast and efficient enough to handle large documents without breaking a sweat.
 
+Includes
+------------
+
+Currently the library supports these functions:
+
+- Word segmentation (`split`)
+- Word count (`word_count`) (faster than counting the result of `split`)
+- Whether a string contains Thai or not (`contains_thai`)
+
+
 Installation
 ------------
 
@@ -32,4 +42,11 @@ And then you can simply install `pythai` through **pip**:
 
     pip install pythai
 
+More
+------------
+
 Special thanks to Vee Satayamas for the original python bindings of libthai from C.
+
+This library was written for use in [Gengo](http://www.gengo.com). It's free and open-source under the GNU lesser public license. Any contributions are welcome!
+
+
