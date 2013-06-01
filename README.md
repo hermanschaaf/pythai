@@ -34,7 +34,7 @@ Currently the library supports these functions:
 Installation
 ------------
 
-PyThai equires `thailib` to work. You can install it quite easily:
+PyThai requires `thailib` to work. You can install it quite easily:
 
     sudo apt-get install thailib
 
