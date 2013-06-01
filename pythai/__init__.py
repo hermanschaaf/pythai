@@ -1,0 +1,1 @@
+from pythai import contains_thai, word_count, split
