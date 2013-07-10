@@ -34,9 +34,9 @@ Currently the library supports these functions:
 Installation
 ------------
 
-PyThai requires `thailib` to work. You can install it quite easily:
+PyThai requires `libthai-dev` to work. You can install it quite easily:
 
-    sudo apt-get install thailib
+    sudo apt-get install libthai-dev
 
 And then you can simply install `pythai` through **pip**:
 
