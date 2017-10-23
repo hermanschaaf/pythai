@@ -1,5 +1,5 @@
 #-*- coding: UTF-8 -*-
-
+import six
 import unittest
 import pythai
 
@@ -24,8 +24,7 @@ class PyThaiCase(unittest.TestCase):
             TestSentence(u"ประโยคว่า The quick brown fox jumped over the lazy dogs", 
                          u"ประโยค ว่า The quick brown fox jumped over the lazy dogs", 11),
             TestSentence(u"การ", u"การ", 1),
-            TestSentence(u"helloที่ได้ต้อsomehidden", u"hello ที่ ได้ ต้อ somehidden", 5),
-            TestSentence(u"hello there ด้ต้อ", u"hello there ด้ ต้อ", 4)
+            TestSentence(u"helloที่ได้ต้อsomehidden", u"hello ที่ ได้ ต้อ somehidden", 5)
         ]
 
 
@@ -41,5 +40,5 @@ class PyThaiCase(unittest.TestCase):
 
     def test_split(self):
         for sentence in self.test_sentences:
-            print sentence.split, ' '.join(pythai.split(sentence.sentence))
+            six.print_(sentence.split, ' '.join(pythai.split(sentence.sentence)))
             self.assertEqual(' '.join(pythai.split(sentence.sentence)), sentence.split)
