@@ -1,6 +1,9 @@
 #-*- coding: UTF-8 -*-
 import libthai
 import re
+import six
+if six.PY2:
+	str = unicode
 
 # range of thai characters in unicode
 thai_range = re.compile(u'[\u0e00-\u0e7f]')
@@ -30,7 +33,7 @@ def word_count(sentence):
     segmented list of words in a Thai sentence, so use
     this method if the word count is all you really need.
     """
-    phrases = map(unicode.strip, sentence.split())
+    phrases = map(str.strip, sentence.split())
     count = 0
     for phrase in phrases:
         count += len(_split_thai_phrase(phrase))
@@ -41,7 +44,7 @@ def split(text):
     Split a piece of Thai text into separate words,
     and return a list of these words.
     """
-    phrases = map(unicode.strip, text.split())
+    phrases = map(str.strip, text.split())
     split = []
     for phrase in phrases:
         split += _split_thai_phrase(phrase)
